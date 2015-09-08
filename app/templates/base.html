@@ -1,0 +1,92 @@
+{% block doc -%}
+<!DOCTYPE html>
+<html {% block html_attribs %}{% endblock html_attribs %}>
+{%- block html %}
+    <head>
+    {%- block head %}
+        <title>{% block title %}{% endblock %}</title>
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+        {%- block styles %}
+            <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.min.css">
+            <link rel="stylesheet" type="text/css" href="/static/css/lab.css">
+        {%- endblock styles %}
+
+        {% block scripts %}
+            <script src="/static/js/jquery.min.js"></script>
+            <script src="/static/js/bootstrap.min.js"></script>
+        {%- endblock scripts %}
+
+    {%- endblock head %}
+    </head>
+
+    <body{% block body_attribs %}{% endblock body_attribs %}>
+    {% block body -%}
+
+        {% block navbar %}
+<nav class="navbar navbar-default nav-stick-to-top navbar-static-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+        <img src="/static/pic/SYSU.gif" width="60%"/>
+        <p class="lab-title">Lab of Intelligence Science and System</p>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right lab-nav-btn">
+          <li><a href="{{url_for('index')}}">Home</a></li>
+          <li><a href="{{url_for('faculty')}}">Faculty</a></li>
+          <li><a href="{{url_for('student')}}">Students</a></li>
+          <li><a href="{{url_for('research')}}">Research Project</a></li>
+          <li><a href="{{url_for('recruitment')}}">Recruitement</a></li>
+          <li><a href="{{url_for('contact')}}">Contact</a></li>                
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+        {%- endblock navbar %}
+<!--        <div class="container">
+            <div class="col-md-12">
+            {% for message in get_flashed_messages() %}
+                <div class="alert alert-warning">
+                  <button type="button" class="close" data-dismiss="alert">&times;</button>
+                  {{ message }}
+                </div>
+            {% endfor %}
+            </div>
+        </div> -->
+        {% block content -%}
+        {%- endblock content %}
+
+
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="/static/pic/SYSU.gif" width="30%"/>
+                        <p class="lab-footer-title">Lab of Intelligence Science and System</p>
+                    </div>
+                    <div class="col-md-6" style="text-align:right">
+                        <div>
+                            <a class="footer-btn" href="http://www.sysu.edu.cn/">SYSU home</a>
+                            <a class="footer-btn" href="http://sist.sysu.edu.cn/">SIST home</a>
+                            <a class="footer-btn" href="#"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    {%- endblock body %}
+{%- endblock html %}
+</html>
+{% endblock doc -%}
+

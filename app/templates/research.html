@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% import "components.html" as components %}
+
+{% block title %}SYSU Lab of Intelligence Science and System - Research Project{% endblock %}
+
+{% block content %}
+{{ components.make_title('Research Project') }}
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            {% for i in range(10) %}
+            <div>
+                <p> Project Name </p>
+                <img alt="Pic None" height="200px"/>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}
