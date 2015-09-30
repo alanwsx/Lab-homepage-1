@@ -3,3 +3,17 @@
         <p class="component-title-text" id="faculty">{{text}}</h2>
 </div>
 {% endmacro %}
+
+
+{% macro make_person(name, imgPath, research_direction, url) %}
+<div class="col-md-3 person-box">
+    <a
+    href="{{ url if url else 'javascript:void(0)'}}"  target="_blank"
+    >
+        <img   class="person-img"  src="{{ url_for('static', filename = imgPath) }}" />
+        <p class="person-name"> {{name}} </p>
+        <!-- <p class="person-direction"> {{research_direction}} </p> -->
+    </a>
+
+</div>
+{% endmacro %}

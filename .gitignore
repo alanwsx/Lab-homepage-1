@@ -1,5 +1,38 @@
+nohup.out
 *.swp
 *.pyc
 env/
 *.conf
 *.ini
+
+# svn
+*.svn*
+
+# mac
+*.DS_Store*
+*._*
+*.lock
+*.Spotlight-V100
+*.Trashes
+*ehthumbs.db
+*Thumbs.db
+
+# Python
+*.pyc
+
+# Vim
+*.swp
+*.swo
+*.swn
+
+# generated files
+bin/*
+gen/*
+
+# Intellij project files
+*.iml
+*.ipr
+*.iws
+.idea/
+
+

@@ -4,18 +4,32 @@
 {% block title %}SYSU Lab of Intelligence Science and System - Faculty{% endblock %}
 
 {% block content %}
-{{ components.make_title('Faculty') }}
-
+{{ components.make_title('Academic Staff') }}
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            {% for i in range(10) %}
-            <div class="col-md-3 name-box">
-                <img alt="Pic None" height="200px"/>
-                <p> Name </p>
-            </div>
-            {% endfor %}
+            {{ components.make_person('Jian-Huang Lai', "pic/faculty/laijianhuang.jpg", '研究方向-占位', 'http://sist.sysu.edu.cn/main/default/teainfo.aspx?id=45&no=1&pId=10' ) }}
+            {{ components.make_person('Wei-Shi (Jason) Zheng', "pic/faculty/jason.jpg", 'Machine Vision and Intelligence Learning', 'http://sist.sysu.edu.cn/~zhwshi/' ) }}
         </div>
     </div>
 </div>
+
+{{ components.make_title('Research Professor') }}
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            {{ components.make_person('Xiaohua Xie', "pic/faculty/xiexiaohua.jpg", '研究方向-占位', 'http://web.siat.ac.cn/~xiaohua/' ) }}
+        </div>
+    </div>
+</div>
+{#
+{{ components.make_title('Research Fellows') }}
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            {{ components.make_person('Dakun Yang', "pic/faculty/yangdakun.jpg", '研究方向-占位', '' ) }}
+        </div>
+    </div>
+</div>
+#}
 {% endblock %}

@@ -43,11 +43,12 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right lab-nav-btn">
           <li><a href="{{url_for('index')}}">Home</a></li>
+          <!-- <li><a href="{{url_for('news')}}">News</a></li> -->
           <li><a href="{{url_for('faculty')}}">Faculty</a></li>
-          <li><a href="{{url_for('student')}}">Students</a></li>
+          <li><a href="{{url_for('postgraduate')}}">Postgraduate</a></li>
           <li><a href="{{url_for('research')}}">Research Project</a></li>
-          <li><a href="{{url_for('recruitment')}}">Recruitement</a></li>
-          <li><a href="{{url_for('contact')}}">Contact</a></li>                
+          <!-- <li><a href="{{url_for('recruitment')}}">Recruitement</a></li> -->
+          <li><a href="{{url_for('contact')}}">Contact</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
@@ -66,8 +67,6 @@
         </div> -->
         {% block content -%}
         {%- endblock content %}
-
-
         <footer class="footer">
             <div class="container">
                 <div class="row">
@@ -86,7 +85,11 @@
             </div>
         </footer>
     {%- endblock body %}
+
+
+    {% block script%}
+    {% endblock script%}
+</body>
 {%- endblock html %}
 </html>
 {% endblock doc -%}
-

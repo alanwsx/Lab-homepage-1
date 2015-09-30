@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% import "components.html" as components %}
+
+{% block title %}SYSU Lab of Intelligence Science and System - Contact{% endblock %}
+
+{% block content %}
+{{ components.make_title('News') }}
+<div class="container">
+
+    {% for i in range(3) %}
+    <div class="news">
+        <h3><i><span >September 3, 2015:</span></i></h3>
+        <h2><span > Stanford and Toyota announce new AI research center. </span></h2>
+        <p>Led by Fei-Fei Li, the new SAIL-Toyota Center for AI Research will focus on advancing computer vision and</p>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
