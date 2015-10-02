@@ -1,7 +1,7 @@
 Lab-Homepage
 ============
 
-A homepage of the Lab of Intelligence Science and System
+A homepage of the Intelligence Science and System Lab
 
 Installation
 ------------
