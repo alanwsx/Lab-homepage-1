@@ -3,32 +3,51 @@
 
 
 {% block content %}
-{{ components.make_title('Academic Staff') }}
+
+{{ components.make_title('Faculty') }}
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            {{ components.make_person('Jian-Huang Lai', "pic/faculty/laijianhuang.jpg", '研究方向-占位', 'http://sist.sysu.edu.cn/main/default/teainfo.aspx?id=45&no=1&pId=10' ) }}
-            {{ components.make_person('Wei-Shi (Jason) Zheng', "pic/faculty/jason.jpg", 'Machine Vision and Intelligence Learning', 'http://sist.sysu.edu.cn/~zhwshi/' ) }}
+            <div class="col-md-3 person-box">
+                <a
+                href="http://sist.sysu.edu.cn/main/default/teainfo.aspx?id=45&amp;no=1&amp;pId=10"  target="_blank"
+                >
+                    <img   class="person-img"  src="/static/pic/faculty/laijianhuang.jpg" />
+                    <p class="person-name"> Jian-Huang Lai </p>
+                    <p class="academic-title">Professor</p>
+                </a>
+
+            </div>
+
+
+            <div class="col-md-3 person-box">
+                <a
+                href="http://sist.sysu.edu.cn/~zhwshi/"  target="_blank"
+                >
+                    <img   class="person-img"  src="/static/pic/faculty/jason.jpg" />
+                    <p class="person-name"> Wei-Shi (Jason) Zheng </p>
+                    <p class="academic-title">Associate Professor</p>
+
+                </a>
+
+            </div>
+
+
+            <div class="col-md-3 person-box">
+                <a
+                href="http://web.siat.ac.cn/~xiaohua/"  target="_blank"
+                >
+                    <img   class="person-img"  src="/static/pic/faculty/xiexiaohua.jpg" />
+                    <p class="person-name"> Xiao-Hua Xie </p>
+                    <p class="academic-title">Research Professor</p>
+                </a>
+
+            </div>
         </div>
     </div>
 </div>
 
-{{ components.make_title('Research Professor') }}
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            {{ components.make_person('Xiaohua Xie', "pic/faculty/xiexiaohua.jpg", '研究方向-占位', 'http://web.siat.ac.cn/~xiaohua/' ) }}
-        </div>
-    </div>
-</div>
-{#
-{{ components.make_title('Research Fellows') }}
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            {{ components.make_person('Dakun Yang', "pic/faculty/yangdakun.jpg", '研究方向-占位', '' ) }}
-        </div>
-    </div>
-</div>
-#}
+
+
+
 {% endblock %}

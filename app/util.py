@@ -9,6 +9,7 @@ from libs import pinyin
 
 
 NAME_KEY='Name'
+ACADEMIC_TITLE_KEY='Academic Title'
 ENGLISH_NAME_KEY='English Name'
 EMAIL_KEY='Email'
 IMAGE_PATH_KEY='Image'
@@ -31,27 +32,27 @@ def convert_name_to_English(name):
 
 
 def format_person_info(dict):
-    r = {}
     name = dict[NAME_KEY]
-    r[NAME_KEY] = name
-    r[EMAIL_KEY] = dict['Email']
-    postgraduate_image_dir = os.path.join(app.app.root_path, 'static/pic/postgraduate')
-    image_path = os.path.join(postgraduate_image_dir,name+'.jpg')
+    student_image_dir = os.path.join(app.app.root_path, 'static/pic/student')
+    image_path = os.path.join(student_image_dir,name+'.jpg')
+    print os.path.exists(image_path)
     if os.path.exists(image_path):
-        image_path = os.path.join('pic/postgraduate',name+'.jpg')
+        image_path = os.path.join('pic/student',name+'.jpg')
     else:
         image_path = 'pic/default_icon.jpg'
-    r[IMAGE_PATH_KEY] = image_path
+    dict[IMAGE_PATH_KEY] = image_path
 
-    r[ENGLISH_NAME_KEY] = dict[ENGLISH_NAME_KEY] if dict.get(ENGLISH_NAME_KEY) else convert_name_to_English(name)
-    return r
+    if not dict.get(ENGLISH_NAME_KEY):
+        dict[ENGLISH_NAME_KEY] = convert_name_to_English(name)
+
+    return dict
 
 person_list = None
-def get_postgraduate_list():
+def get_student_list():
     global person_list
     if person_list:
         return person_list
-    csv_path = os.path.join(app.app.root_path, 'resource/postgraduate.csv')
+    csv_path = os.path.join(app.app.root_path, 'resource/student.csv')
     reader = csv.DictReader(file(csv_path, 'rb'))
     person_list = [format_person_info(dict) for dict in reader];
     return person_list

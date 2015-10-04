@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% import "components.html" as components %}
+
+
+{% macro make_student(student_list)%}
+{% for person in student_list %}
+{% set name = person[NAME_KEY] %}
+{% set English_name = person[ENGLISH_NAME_KEY] %}
+{% set image_path = person[IMAGE_PATH_KEY] %}
+{% set email = person[EMAIL_KEY] %}
+{% set url = person['url'] %}
+
+<div class="col-md-3 person-box">
+    <a
+    data-toggle="modal"
+    data-target="#modal_{{name}}"
+    >
+        <img   class="person-img"  src="{{ url_for('static', filename = image_path) }}" />
+        <p class="person-name"> {{English_name}} </p>
+        <!-- <p class="person-direction"> {{research_direction}} </p> -->
+    </a>
+</div>
+{# 每人一个简介 模态窗口 #}
+<div class="modal fade" id="modal_{{name}}" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">
+                    {{English_name}}
+                </h2>
+            </div>
+            <div class="modal-body">
+                <img class="person-img"  src="{{ url_for('static', filename = image_path) }}" />
+                <h3> Email:</h3>
+                <p> {{email}}</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">
+                    OK
+                </button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+{% endfor %}
+
+{% endmacro %}
+
+
+{% block content %}
+{{ components.make_title('PHD') }}
+<div class="container">
+    <div class="row">
+        <div class="col-md-12" >
+
+            {{make_student(phd_list)}}
+        </div>
+    </div>
+</div>
+
+{{ components.make_title('MASTER') }}
+<div class="container">
+    <div class="row">
+        <div class="col-md-12" >
+
+            {{make_student(master_list)}}
+        </div>
+    </div>
+</div>
+
+</div>
+
+
+{% endblock content %}

@@ -16,11 +16,14 @@
 }
 
 .lab-title {
-    font: 22px Open Sans;
+    font-size: 80px;
+    font-family: cursive;
+    letter-spacing: 5px;
+    color:#3e83c8;
     /*Arial, sans-serif*/
     /*lucida console*/
     margin-bottom: 0px;
-    margin-left: 15px;
+    margin-left: 100px;
 }
 
 .lab-nav-btn li {
@@ -88,6 +91,10 @@ body { font-weight: normal;}
     font-size: 16px;
 }
 
+div.footer-link {
+    margin-top:50px
+}
+
 .lab-footer-title {
     font: 18px Open Sans;
     margin-left: 15px;
@@ -110,10 +117,21 @@ div.news h3, div.news h2{
     color: #0099CC;
 }
 
+
+/*staff*/
+.academic-title {
+    font-size: 16px;
+    font-style: italic;
+    color: #278ec8;
+}
+
+
+
 /* person */
 .person-box {
     text-align: center;
     margin-bottom: 50px;
+    color: red;
 }
 
 .person-img {
@@ -137,6 +155,7 @@ div.news h3, div.news h2{
 
 .person-name {
     text-align: center;
+    color:blue;
     margin: 10px;
     font-size:18px;
 
@@ -172,10 +191,6 @@ div.research-result{
 /* color palette */
 .navbar {
     background-color: #FFF;
-}
-
-.lab-title {
-    color: #777;
 }
 
 .borderless {
