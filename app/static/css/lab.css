@@ -19,20 +19,27 @@
     font-size: 80px;
     font-family: cursive;
     letter-spacing: 5px;
-    color:#3e83c8;
     /*Arial, sans-serif*/
     /*lucida console*/
     margin-bottom: 0px;
     margin-left: 100px;
 }
 
+
+.lab-nav-btn {
+    margin-top: 45px;
+    border-radius: 8px;
+    padding: 0 3px;
+}
+
+
 .lab-nav-btn li {
-    margin-top: 34px;
     margin-left: 5px;
     margin-right: 5px;
-
     font: 16px 'lucida console', Arial, sans-serif;
 }
+
+
 .navbar {
     padding-top: 20px;
     padding-bottom: 5px;
@@ -49,7 +56,7 @@ h6 { font: normal 12px/18px Open Sans;  color:#000000; }
 body { font-weight: normal;}
 
 .container{
-    padding-left: 50px;
+    padding-left: auto;
 }
 
 
@@ -80,9 +87,9 @@ body { font-weight: normal;}
 
 .footer {
     margin-top:40px;
-    background-color: #e7e7e7;
     padding-left: 20px;
     padding-top: 15px;
+    padding-right: 20px;
     padding-bottom: 15px;
 }
 
@@ -92,7 +99,7 @@ body { font-weight: normal;}
 }
 
 div.footer-link {
-    margin-top:50px
+    margin-top:60px
 }
 
 .lab-footer-title {
@@ -155,7 +162,7 @@ div.news h3, div.news h2{
 
 .person-name {
     text-align: center;
-    color:blue;
+    color:rgb(118, 133, 235);
     margin: 10px;
     font-size:18px;
 
@@ -193,12 +200,29 @@ div.research-result{
     background-color: #FFF;
 }
 
+.lab-title{
+    color:rgb(29, 14, 147);
+}
+
+.navbar-nav{
+    background-color: #6ca7de;
+}
+
+.navbar-right.navbar-nav>li>a{
+    color: #fff;
+}
+
+.navbar-right.navbar-nav>li>a:hover{
+    background-color: rgb(57, 122, 170);
+    color: #fff;
+}
+
 .borderless {
     border: none;
 }
 
 .footer {
-    background-color: #C0C0C1;
+    background-color: #f7f7f7;
     color: #0a2b07;
 }
 .content>p {
@@ -209,12 +233,12 @@ div.research-result{
 
 /* components */
 .component-title-box {
-    background-color: #F0F0F0;
+    background-color: #FBFBFB;
     margin-bottom: 50px;
 }
 .component-title-text {
     font: normal 40px/28px 'Open Sans';
-    color:#000000;
-    margin: 30px;
-    margin-left: 100px;
+    color:#4eb4ff;
+    margin: 20px;
+    margin-left: 200px;
 }

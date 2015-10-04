@@ -9,45 +9,72 @@
     <!--
     <p class="research-name"> Computer Vision </p>
     <div class="research-project">
-        <p class="research-content">
-        </p>
-    </div>
+    <p class="research-content">
+</p>
+</div>
 
-    <p class="research-name"> Pattern Recognition </p>
-    <div class="research-project">
-        <p class="research-content">
-        </p>
-    </div>
+<p class="research-name"> Pattern Recognition </p>
+<div class="research-project">
+<p class="research-content">
+</p>
+</div>
 
 
 
-    <p class="research-name"> Machine Learning </p>
-    <div class="research-project">
-        <p class="research-content">
-        </p>
-    </div>
+<p class="research-name"> Machine Learning </p>
+<div class="research-project">
+<p class="research-content">
+</p>
+</div>
 
 -->
 
 
 
-    <div class="news">
-        <h2><span > Computer Vision </span></h2>
-    </div>
+<div class="news">
+    <h2> Person Re-identification </h2>
+    <hr/>
+    <img src="{{ url_for('static', filename = 'pic/research_example.jpg') }}"/>
+    <br/>
+    <br/>
+
+
+    <p style="color: rgb(58, 59, 184);font-size:20px;">
+        Developed a probabilistic relative distance comparison model for matching individual person across non-overlapping camera views in a surveillance system. The advantage of this model is that rather than maximizing the difference in distances between a pair of relevant person images and any related irrelevant pair, the proposed model is a soft discriminant model and only directly minimizes the probabilistic error of the relative distance comparison between them, which is proved to be more effective for person re-identification in order to alleviate the over-fitting problem due to the large variations of person’s appearance across non-overlapping camera views
+    </p>
+    <br/>
+    <br/>
+    <p>---</p>
+    <p style="color: rgb(0, 0, 0);font-size:15px;">
+        W.-S. Zheng, S. Gong, and T. Xiang, "Person Re-identification by Probabilistic Relative Distance Comparison", IEEE Conf. on Compuer Vision and Pattern Recognition, 2011.   </p>
+    </p>
+    <p style="color: rgb(0, 0, 0);font-size:15px;">
+        Wei-Shi Zheng, Shaogang Gong, and Tao Xiang, "Re-identification by Relative Distance Comparison," IEEE Trans. on Pattern Analysis and Machine Intelligence,  2013.
+    </p>
+
+
+</div>
+
+
+ <div class="news">
+     <h2><p >  Computer Vision  </p></h2>
+     <hr/>
+ </div>
+
+
+<div class="news">
+    <h2><p > Pattern Recognition </p></h2>
+    <hr/>
+</div>
 
 
 
 
-    <div class="news">
-        <h2><span > Pattern Recognition </span></h2>
-    </div>
+<div class="news">
+    <h2><p > Machine Learning </p></h2>
+    <hr/>
 
-
-
-
-    <div class="news">
-        <h2><span > Machine Learning </span></h2>
-    </div>
+</div>
 
 </div>
 {% endblock content%}

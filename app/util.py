@@ -35,7 +35,6 @@ def format_person_info(dict):
     name = dict[NAME_KEY]
     student_image_dir = os.path.join(app.app.root_path, 'static/pic/student')
     image_path = os.path.join(student_image_dir,name+'.jpg')
-    print os.path.exists(image_path)
     if os.path.exists(image_path):
         image_path = os.path.join('pic/student',name+'.jpg')
     else:
