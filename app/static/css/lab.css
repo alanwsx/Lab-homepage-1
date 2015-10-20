@@ -16,18 +16,19 @@
 }
 
 .lab-title {
-    font-size: 80px;
+    font-size: 70px;
     font-family: cursive;
     letter-spacing: 5px;
     /*Arial, sans-serif*/
     /*lucida console*/
-    margin-bottom: 0px;
-    margin-left: 100px;
+    height: 100px;
+    margin-top: 15px;
+    margin-left: 30px;
 }
 
 
 .lab-nav-btn {
-    margin-top: 45px;
+    margin-top: 55px;
     border-radius: 8px;
     padding: 0 3px;
 }
@@ -41,11 +42,12 @@
 
 
 .navbar {
-    padding-top: 20px;
+    padding-top: 30px;
     padding-bottom: 5px;
     padding-left: 50px;
     padding-right: 50px;
 }
+
 
 h1 { font: normal 50px/35px Open Sans;  color:#ffffff; }
 h2 { font: normal 30px/22px Open Sans;  color:#000000; }
@@ -56,7 +58,7 @@ h6 { font: normal 12px/18px Open Sans;  color:#000000; }
 body { font-weight: normal;}
 
 .container{
-    padding-left: auto;
+    padding-left: 100px;
 }
 
 
@@ -238,7 +240,7 @@ div.research-result{
 }
 .component-title-text {
     font: normal 40px/28px 'Open Sans';
-    color:#4eb4ff;
+    color:#579ed2;
     margin: 20px;
-    margin-left: 200px;
+    margin-left: 170px;
 }
