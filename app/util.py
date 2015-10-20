@@ -34,7 +34,7 @@ def convert_name_to_English(name):
 
 def format_person_info(dict):
     name = dict[NAME_KEY]
-    student_image_dir = os.path.join(app.app.root_path, 'static/pic/student')
+    student_image_dir = os.path.join(app.app.static_folder, 'pic/student')
     image_path = os.path.join(student_image_dir,name+'.jpg')
     print image_path
     if os.path.exists(image_path):
