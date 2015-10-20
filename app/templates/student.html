@@ -2,18 +2,26 @@
 {% import "components.html" as components %}
 
 
-{% macro make_student(student_list)%}
-{% for person in student_list %}
+
+
+
+{% macro make_student(person)%}
 {% set name = person[NAME_KEY] %}
 {% set English_name = person[ENGLISH_NAME_KEY] %}
 {% set image_path = person[IMAGE_PATH_KEY] %}
 {% set email = person[EMAIL_KEY] %}
-{% set url = person['url'] %}
+{% set url = person[URL_KEY] %}
 
 <div class="col-md-3 person-box">
     <a
+    {% if not url %}
     data-toggle="modal"
     data-target="#modal_{{name}}"
+    {% else %}
+
+    href="{{url}}"  target="_blank"
+
+    {%endif%}
     >
         <img   class="person-img"  src="{{ url_for('static', filename = image_path) }}" />
         <p class="person-name"> {{English_name}} </p>
@@ -42,18 +50,40 @@
         </div><!-- /.modal-content -->
     </div><!-- /.modal -->
 </div>
-{% endfor %}
 
 {% endmacro %}
 
 
+{% macro make_student_list(student_list)%}
+{% for person in student_list %}
+
+{{make_student(person)}}
+
+{% endfor %}
+{%endmacro%}
+
+
+
+
 {% block content %}
+
+{{ components.make_title('Research Fellows') }}
+<div class="container">
+    <div class="row">
+        <div class="col-md-12" >
+            {{make_student_list(research_fellows_list)}}
+        </div>
+    </div>
+</div>
+
+
+
 {{ components.make_title('PHD') }}
 <div class="container">
     <div class="row">
         <div class="col-md-12" >
 
-            {{make_student(phd_list)}}
+            {{make_student_list(phd_list)}}
         </div>
     </div>
 </div>
@@ -63,7 +93,18 @@
     <div class="row">
         <div class="col-md-12" >
 
-            {{make_student(master_list)}}
+            {{make_student_list(master_list)}}
+        </div>
+    </div>
+</div>
+
+
+{{ components.make_title('UNDERGRADUATE') }}
+<div class="container">
+    <div class="row">
+        <div class="col-md-12" >
+
+            {{make_student_list(undergraduate_list)}}
         </div>
     </div>
 </div>

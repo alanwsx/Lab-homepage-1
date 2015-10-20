@@ -19,16 +19,21 @@ def faculty():
 @app.route('/student')
 def student():
     list = util.get_student_list()
-    phd_list = filter(lambda dict: "博士" in dict[util.ACADEMIC_TITLE_KEY], list)
+    research_fellows_list = filter(lambda dict: "博士后" in dict[util.ACADEMIC_TITLE_KEY], list)
+    phd_list = filter(lambda dict: "博士" in dict[util.ACADEMIC_TITLE_KEY] and "博士后" not in dict[util.ACADEMIC_TITLE_KEY] , list)
     master_list = filter(lambda dict: "硕士" in dict[util.ACADEMIC_TITLE_KEY], list)
+    undergraduate_list = filter(lambda dict: "本科" in dict[util.ACADEMIC_TITLE_KEY], list)
     return render_template('student.html',
-        person_list = list,
+        # person_list = list,
+        research_fellows_list = research_fellows_list,
         phd_list = phd_list,
+        undergraduate_list = undergraduate_list,
         master_list = master_list,
         NAME_KEY = util.NAME_KEY,
         ENGLISH_NAME_KEY = util.ENGLISH_NAME_KEY ,
         EMAIL_KEY = util.EMAIL_KEY,
-        IMAGE_PATH_KEY=util.IMAGE_PATH_KEY)
+        IMAGE_PATH_KEY=util.IMAGE_PATH_KEY,
+        URL_KEY=util.URL_KEY)
 
 @app.route('/research')
 def research():
