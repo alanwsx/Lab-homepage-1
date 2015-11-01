@@ -58,6 +58,7 @@ h6 { font: normal 12px/18px Open Sans;  color:#000000; }
 body { font-weight: normal;}
 
 .container{
+    padding-top: 20px;
     padding-left: 100px;
 }
 
