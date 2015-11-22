@@ -1,7 +1,11 @@
 Lab-Homepage
 ============
 
-A homepage of the Intelligence Science and System Lab
+Homepage for iSEE Lab @ Sun Yat-Sen University 
+
+-----------
+
+Based on Flask and Bootstrap
 
 Installation
 ------------
